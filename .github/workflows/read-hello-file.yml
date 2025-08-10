@@ -1,0 +1,17 @@
+name: Git CI/ID for Module 2 Project_2
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  read-hello-file:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Read and print text file
+        run: cat hello.txt
